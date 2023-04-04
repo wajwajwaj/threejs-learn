@@ -1,0 +1,24 @@
+{
+  "name": "threejs-learn",
+  "version": "1.0.0",
+  "description": "学习three.js",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wajwajwaj/threejs-learn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wajwajwaj/threejs-learn/issues"
+  },
+  "homepage": "https://github.com/wajwajwaj/threejs-learn#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
