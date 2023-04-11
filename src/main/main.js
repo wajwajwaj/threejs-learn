@@ -55,6 +55,8 @@ const axesHelper = new THREE.AxesHelper(5)
 scene.add(axesHelper)
 
 let preTime
+const clock = new THREE.Clock()
+
 // 渲染函数
 function render(time) {
   if (preTime === undefined) {
@@ -62,11 +64,14 @@ function render(time) {
   }
   const delaTime = time - preTime //计算每帧的画面的间隔时间
   // console.log(delaTime, time) // 时间间隔有差异，但是要保证运动速度一致  移动速度 = 速度 * 时间
-  preTime = time
-  cube.position.x = 1 * (time / 1000 % 5)  // 处理性能
-  // let t = (time / 1000) % 5;
-  // cube.position.x = t * 1;
+  // preTime = time
+  let t 
+  // t = time  // 单位秒
+  // cube.position.x = 1 * (t / 1000 % 5) // 处理性能
+  t = clock.getElapsedTime() // 单位毫秒 
+  cube.position.x = 1 * (t % 5) // 处理性能
 
+  // cube.position.x = t * 1;
   // cube.position.x += 0.01
   cube.rotation.y += 0.01
   // 设置旋转 参数分别为x，y，z 最后一个参数表明了旋转的顺序
