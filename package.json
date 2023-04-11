@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/wajwajwaj/threejs-learn#readme",
   "dependencies": {
+    "gsap": "^3.11.5",
     "three": "^0.151.3"
   },
   "devDependencies": {
